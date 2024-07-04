@@ -6,6 +6,15 @@
     <title>Music Reviews</title>
 </head>
 <body>
-    fNver works
+    <h1>Music Reviews</h1>
+    {% for review in reviews %}
+        <div>
+            <h2>{{ review.album }} by {{ review.artist }}</h2>
+            <p><strong>Review:</strong> {{ review.review }}</p>
+            <p><strong>Rating:</strong> {{ review.rating }}</p>
+            <p><strong>Date:</strong> {{ review.review_date }}</p>
+            <hr>
+        </div>
+    {% endfor %}
 </body>
 </html>
