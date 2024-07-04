@@ -18,10 +18,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/index")
-def index():
-    reviews = list(mongo.db.reviews.find())
-    return render_template("index.html", reviews=selected_reviews)
+def hello():
+    return "never works"
 
 
 if __name__ == "__main__":
