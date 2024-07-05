@@ -1,3 +1,60 @@
 /* Import Google font */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* General styles */
+
+body {
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+a {
+    font-weight: 300;
+    font-size: 1.2rem
+}
+
+/* Header, logo and nav styles */
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+.justify-nav {
+    justify-content: end;
+}
+
+#logo {
+    height: 50px;
+    width: 154px;
+}
