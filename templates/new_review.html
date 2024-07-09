@@ -9,4 +9,21 @@
         </div>
     </div>
 </div>
+
+<!-- new review form -->
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <form method="POST" action="{{ url_for('new_review') }}">
+                <!-- select genre dropdown -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-rectangle-list"></i>
+                    <label for="genre-name">Music Genre</label>
+                    <select class="form-select" id="genre-name" name="genre_name" required>
+                        <option value="" disabled selected>Please select a genre...</option>
+                        {% for genre in genres %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 {% endblock %}
