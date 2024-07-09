@@ -44,5 +44,47 @@
                 </p>
             </div>
         </div>
+        {% if review.explicit_language == "yes" %}
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <div class="alert alert-danger" role="alert">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Warning! This song contains explicit language.
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row justify-content-center mt-2">
+            <div class="col text-center">
+                <a href="{{ url_for('get_reviews') }}" class="btn btn-secondary">Back to Reviews</a>
+                <!-- Edit/delete buttons if review belongs to user -->
+                {% if session.user|lower == review.review_by|lower %}
+                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-success">Edit Review</a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete
+                    Review</button>
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="modal-title fs-5" id="deleteModalTitle">Please confirm</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete your review of {{ review.song_name }} by
+                                {{ review.artist_name }}?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
+                                <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-danger">Delete Review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
         {% endblock %}
