@@ -50,5 +50,39 @@
                     <p class="card-subtitle mb-2 mt-auto text-body-secondary">Author: {{ review.review_by }}</p>
 
                 </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('review_details', review_id=review._id) }}" class="btn btn-secondary me-1">Read
+                        more</a>
+                    {% if session.user|lower == review.review_by|lower %}
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-success me-1">Edit</a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#deleteModal{{ review._id }}">Delete</button>
+                    <div class="modal fade" id="deleteModal{{ review._id }}" tabindex="-1" aria-labelledby="deleteModal{{ review._id }}"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="modal-title fs-5" id="deleteModalTitle">Please confirm</span>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete your review of {{ review.song_name }} by
+                                    {{ review.artist_name }}?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go
+                                        back</button>
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-danger">Delete Review</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
 
 {% endblock %}
