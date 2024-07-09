@@ -162,7 +162,7 @@ def new_review():
             "review_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
-        flash("Rock on! Your review has been submitted.")
+        flash("Your review has been submitted.")
         return redirect(url_for("get_reviews"))
 
     genres = mongo.db.genres.find().sort("genre_name", 1)
