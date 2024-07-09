@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center mb-2">
+        <div class="col text-center">
+            <h1>Review details</h1>
+        </div>
+    </div>
+    <!-- Review details -->
+    <div class="container mb-5 pb-3 pt-3" id="single-review-container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h2 id="review-details-title">{{ review.review_title }}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Song Name:</b><br>
+                    {{ review.song_name }}
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Artist:</b><br>
+                    {{ review.artist_name }}
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Genre:</b><br>
+                    {{ review.genre_name }}
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h3 id="review-by">
+                    <i>A review by {{ review.review_by }}:</i>
+                </h3>
+                <p>
+                    {{ review.review_content }}
+                </p>
+            </div>
+        </div>
+
+        {% endblock %}
