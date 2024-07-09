@@ -68,6 +68,16 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route('/review_details/<string:review_id>')
+@login_required
+def review_details(review_id):
+    """
+    Gets the id of the review the user clicked on and redirects to
+    the review page for that specific review.
+    """
+    review = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})
+    return render_template('review_details.html', review=review)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
