@@ -93,5 +93,14 @@
         </div>
         {% endfor %}
         {% else %}
-
+         <!-- Message when no reviews are found -->
+         <div class="col-lg-10 text-center">
+            <p>No reviews could be found.</p>
+            {% if session.user %}
+            <a href="{{ url_for('new_review') }}" class="btn btn-secondary">Post the first one</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
     {% endblock %}
