@@ -1,4 +1,5 @@
 import os
+import random
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -33,9 +34,26 @@ def login_required(route_function):
 
 
 @app.route("/")
+@app.route("/index")
 def index():
+    """
+    Returns index page, along with 3 random reviews
+    to be displayed.
+    """
     reviews = list(mongo.db.reviews.find())
-    return render_template("index.html", reviews=reviews)
+    random.shuffle(reviews)
+    selected_reviews = reviews[:3]
+    return render_template("index.html", reviews=selected_reviews)
+
+@app.route("/get_reviews")
+@login_required
+def get_reviews():
+    """
+    Retrieves all reviews from the database to be displayed
+    on the reviews page.
+    """
+    reviews = list(mongo.db.reviews.find())
+    return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/register", methods=["GET", "POST"])
