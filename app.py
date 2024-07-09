@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 if os.path.exists("env.py"):
     import env
 
@@ -16,6 +17,19 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+def login_required(route_function):
+    """
+    If the user is not logged in, redirects to the login page.
+    """
+    @wraps(route_function)
+    def wrapper(*args, **kwargs):
+        if 'user' not in session:
+            flash('You need to be logged in to access this page.', 'warning')
+            return redirect(url_for('login'))
+        return route_function(*args, **kwargs)
+    return wrapper
 
 
 @app.route("/")
@@ -110,6 +124,31 @@ def logout():
     flash("You are logged out. Bye for now!")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/new_review", methods=["GET", "POST"])
+@login_required
+def new_review():
+    """
+    Returns the new_review page and sends the review to the database
+    when submitted.
+    """
+    if request.method == "POST":
+        review = {
+            "genre_name": request.form.get("genre_name"),
+            "song_name": request.form.get("song_name"),
+            "artist_name": request.form.get("artist_name"),
+            "explicit_language": request.form.get("explicit_language"),
+            "review_title": request.form.get("review_title"),
+            "review_content": request.form.get("review_content"),
+            "review_by": session["user"]
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Rock on! Your review has been submitted.")
+        return redirect(url_for("get_reviews"))
+
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("new_review.html", genres=genres)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
