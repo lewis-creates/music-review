@@ -102,3 +102,9 @@ header {
     margin-bottom: 0;
     font-size: 1.5rem;
 }
+
+/* Italic styling used on new review and register page */
+
+.form-text {
+    font-style: italic;
+}
