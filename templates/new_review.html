@@ -26,4 +26,16 @@
                         {% endfor %}
                     </select>
                 </div>
+                 <!-- song name input -->
+                 <div class="mb-3">
+                    <i class="fa-solid fa-music"></i>
+                    <label for="song-name" class="form-label">Song Name</label>
+                    <input type="text" class="form-control" id="song-name" name="song_name" maxlength="60" required>
+                </div>
+                <!-- artist name input -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-user-group"></i>
+                    <label for="artist-name" class="form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artist-name" name="artist_name" maxlength="60" required>
+                </div>
 {% endblock %}
