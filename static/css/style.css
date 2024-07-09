@@ -71,6 +71,23 @@ header {
     margin-top: -1.5rem;
 }
 
+.remove-button-shadow {
+    text-shadow: none;
+}
+
+.home-main-image-text {
+    padding: 1.5rem 0;
+}
+
+.have-account {
+    padding-top: 0.9rem;
+}
+
+.have-account a {
+    text-shadow: none;
+    color: #fff;
+    text-decoration: none;
+}
 
 /* Flash message styles */
 
