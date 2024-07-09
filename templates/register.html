@@ -1,35 +1,51 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Register</h3>
-
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel">
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
-						<input id="username" name="username" type="text" class="validate">
-						<label for="username">Username</label>
-					</div>
-                </div>
-                <!-- password -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
-                        <input id="password" name="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- register -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Register</h1>
+            <hr>
+        </div>
     </div>
+    <!-- Register form -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="mb-3">
+                    <i class="fa-solid fa-user-pen"></i>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" minlength="6" maxlength="20"
+                        pattern="^[a-zA-Z0-9]{6,20}$" required>
+                    <div class="form-text">Must be between 6 and 20 characters with no spaces and can only include
+                        letters and numbers.</div>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-key"></i>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" minlength="8"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <div class="form-text">Must be 8 characters minimum with no spaces and include at least one upper
+                        and lower case letter, one number and one special character (@$!%*?&).</div>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <label for="password-check" class="form-label">Confirm password</label>
+                    <input type="password" class="form-control" id="password-check" name="password_check" minlength="8"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">Register</button>
+                </div>
+            </form>
+        </div>
+        <!-- Login link for users with an account -->
+        <div class="row justify-content-center mt-3">
+            <div class="col text-center">
+                <p>Have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
