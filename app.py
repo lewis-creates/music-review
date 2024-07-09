@@ -191,6 +191,33 @@ def new_review():
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("new_review.html", genres=genres)
 
+
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+@login_required
+def edit_review(review_id):
+    """
+    Takes the review id and returns the edit review page for that review.
+    """
+    if request.method == "POST":
+        submit = {
+            "genre_name": request.form.get("genre_name"),
+            "song_name": request.form.get("song_name"),
+            "artist_name": request.form.get("artist_name"),
+            "explicit_language": request.form.get("explicit_language"),
+            "review_title": request.form.get("review_title"),
+            "review_content": request.form.get("review_content"),
+            "review_by": session["user"]
+        }
+        mongo.db.reviews.replace_one({"_id": ObjectId(review_id)}, submit)
+        flash("Your review has been updated!")
+
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    if review["review_by"] != session["user"]:
+        flash("This is not your review.")
+        return redirect(url_for("get_reviews"))
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("edit_review.html", review=review, genres=genres)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
