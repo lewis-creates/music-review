@@ -48,4 +48,19 @@
                         <option value="no">No</option>
                     </select>
                 </div>
+                 <!-- review title input -->
+                 <div class="mb-3">
+                    <i class="fa-solid fa-pencil"></i>
+                    <label for="review-title" class="form-label">Review Title</label>
+                    <input type="text" class="form-control" id="review-title" name="review_title" maxlength="60"
+                        required>
+                    <div class="form-text">Review title must be a maximum length of 60 characters.</div>
+                </div>
+                <!-- review content input -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-align-left"></i>
+                    <label for="review-content" class="form-label">Review Content</label>
+                    <textarea class="form-control" id="review-content" name="review_content" rows="4"
+                        required></textarea>
+                </div>
 {% endblock %}
