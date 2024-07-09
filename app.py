@@ -56,6 +56,19 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/search", methods=["GET", "POST"])
+@login_required
+def search():
+    """
+    Gets what the user searched for and queries the database
+    for any matching song or artist names.
+    """
+    query = request.form.get("query")
+    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    return render_template("reviews.html", reviews=reviews)
+
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
