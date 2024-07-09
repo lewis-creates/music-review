@@ -118,6 +118,24 @@ header {
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
 
+/* Styling for search text on reviews page */
+
+#search-heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Adjust review title and review by sizing */
+
+#review-details-title {
+    font-size: 1.5rem;
+}
+
+#review-by {
+    font-size: 1.3rem;
+}
+
 /* Remove Bootstrap background and border for card footer */
 
 .card-footer {
