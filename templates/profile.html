@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h3 class="center-align light-blue-text text-darken-4">
-                    {{ username }}'s Profile
-                </h3>
-            </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Profile</h1>
+            <hr>
+        </div>
+    </div>
+    <!-- Welcome message -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+            <p>Welcome to your profile, {{ username }}! Here you can view, edit and delete any of your existing reviews.
+            </p>
         </div>
     </div>
 
