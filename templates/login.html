@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Login</h1>
+            <hr>
+        </div>
+    </div>
+    <!-- Login form -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="mb-3">
+                    <i class="fa-solid fa-user"></i>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" minlength="6" maxlength="20"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-key"></i>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">Login</button>
+                </div>
+            </form>
+        </div>
+        <!-- Register link for users without an account -->
+        <div class="row justify-content-center mt-3">
+            <div class="col text-center">
+                <p>New around here? <a href="{{ url_for('register') }}">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
