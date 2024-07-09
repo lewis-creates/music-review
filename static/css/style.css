@@ -59,3 +59,16 @@ header {
     width: 154px;
 }
 
+/* Flash message styles */
+
+.flashes-container {
+    font-size: 1.5rem;
+    background-color: #6c757d;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.flash-text {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
