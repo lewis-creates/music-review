@@ -83,6 +83,24 @@ def login():
 
     return render_template("login.html")
 
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    """
+    Retrieves username from the session and finds all reviews linked
+    to that user. Redirects to the login page if no user is logged in.
+    """
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        user_reviews = list(mongo.db.reviews.find(
+            {"review_by": session["user"]}))
+        return render_template(
+            "profile.html", username=username, user_reviews=user_reviews)
+
+    return redirect(url_for("login"))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
