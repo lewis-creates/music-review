@@ -59,6 +59,19 @@ header {
     width: 154px;
 }
 
+/* Home page styles */
+
+.home-main-image {
+    background: url(../images/crowd.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    margin-top: -1.5rem;
+}
+
+
 /* Flash message styles */
 
 .flashes-container {
