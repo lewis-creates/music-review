@@ -84,5 +84,14 @@
         </div>
         {% endfor %}
         {% else %}
+                <!-- Message if no reviews are found -->
+                <div class="col-lg-10 text-center">
+                    <p>Looks like you haven't posted any reviews yet.</p>
+                    <a href="{{ url_for('new_review') }}" class="btn btn-secondary">Post your first review</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
 
 {% endblock %}
