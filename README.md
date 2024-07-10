@@ -67,4 +67,19 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 
 Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided.
 
-PLACEHOLDER WIREFRAME IMAGES NEEEDED
+PLACEHOLDER WIREFRAME IMAGES NEEDED
+
+### **Color Scheme**
+
+Navbar and footer background #212529 Dark Grey
+<br>
+Secondary buttons: #6c757d Light grey
+<br>
+Supporting text: #585c5f Grey
+<br>
+Footer text: #9a9d9e Grey
+
+The [WCAG Color Contrast Checker](https://accessibleweb.com/color-contrast-checker/) was used to ensure the grey text against the dark grey background met accessibility standards. All results passed, except for the small text in the AAA test. However, it was deemed acceptable, as the criteria for AAA compliance are exceptionally stringent and are rarely met.
+
+![Color contrast](documentation/color-contrast/colorcontrast.png)
+
