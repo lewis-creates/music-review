@@ -1,8 +1,8 @@
 ## **Vibe Verdicts**
 
-PLACEHOLDER FOR DEPLOYED PROJECT LINK
+[View the deployed project here](https://music-review-2e0269d207cf.herokuapp.com/)
 
-PLACEHOLDER FOR IMAGE ON DEVICES
+![Application shown on multiple devices](documentation/respo.png)
 
 ## **Site Overview**
 
