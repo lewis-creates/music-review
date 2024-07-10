@@ -55,3 +55,10 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 - As a user, I want the ability to delete my own reviews.
 - As a user, I want the ability to search for reviews by song or artist name.
 - As a user, I want the ability to create an account.
+
+### **Site Aims**
+
+- Offer a simple to use application where users can create, read, edit and delete music reviews.
+- Offer the ability to register an account, alloweing the user to see and manage their own reviews on a single page.
+- To keep the user informed as they create, edit and delete reviews with confirmation of each step.
+- To allow the user to search for reviews quickly and easily.
