@@ -62,3 +62,9 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 - Offer the ability to register an account, alloweing the user to see and manage their own reviews on a single page.
 - To keep the user informed as they create, edit and delete reviews with confirmation of each step.
 - To allow the user to search for reviews quickly and easily.
+
+### **Wireframes**
+
+Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided.
+
+PLACEHOLDER WIREFRAME IMAGES NEEEDED
