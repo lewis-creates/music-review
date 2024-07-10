@@ -94,3 +94,17 @@ I decided to import the Oswald font from Google Fonts as I felt it had a modern 
 Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
 
 This feature helps the user as it gives them a clear, easy way to navigate around the website and find what they need.
+
+![Navigation](documentation/features/navbar.png)
+
+Footer - The footer sticks to the bottom of the page, regardless of the page height, so on shorter pages, there is no white gap at the bottom of the page. It includes a contact email address if the user wishes to get in touch with Vibe Verdicts, and also links to their social media accounts. The colour scheme is consistent with the navbar to provide an aesthetic look.
+
+This feature helps the user as they are able to get in touch with the website owner and look for more information and content on their social media accounts.
+
+![Footer](documentation/features/footer.png)
+
+Flash messages - Flash messages, such as 'You are logged out. Bye for now!'  and various others are set to appear in the same place on every page (only when required/prompted via the app.py file). They appear above the first main heading of the page, below the nav bar, to keep consistency.
+
+This feature helps the user as it keeps them informed as they navigate through and use the website. It also provides confirmation when they ask the website to perform a certain action, reassuring them that what they intended to happen, did in fact happen.
+
+![Flash messages](documentation/features/flashmessages.png)
