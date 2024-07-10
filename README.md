@@ -157,3 +157,14 @@ This feature helps the user as it allows them to get involved with the website a
 
 ![New review](documentation/features/newreview.png)
 
+**Profile Page**
+
+Profile welcome message - This is a basic welcome message for the user when logged in and viewing their profile. The profile page is where the user lands when they register or login to their account. The message is populated with their username to give a more personal touch. This feature helps the user as it gives them confidence that the page is specific to them and will show more relevant information to their account, as opposed to everyone else's.
+
+![Profile welcome message](documentation/features/welcomeuser.png)
+
+Profile reviews -  This is where any reviews the particular user has created are displayed. They are prompted with the same read, edit and delete buttons for each review as they see on the main reviews page. If they haven't created any reviews yet, they are shown a message to confirm this along with a prompt to create their first review. This feature helps the user as it allows them to narrow the reviews on the website down to their own reviews, so they can see what they have created all in one place.
+
+![Profile reviews](documentation/features/profilereviews.png)
+
+**Edit Review Page**
