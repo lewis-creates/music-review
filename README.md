@@ -108,3 +108,13 @@ Flash messages - Flash messages, such as 'You are logged out. Bye for now!'  and
 This feature helps the user as it keeps them informed as they navigate through and use the website. It also provides confirmation when they ask the website to perform a certain action, reassuring them that what they intended to happen, did in fact happen.
 
 ![Flash messages](documentation/features/flashmessages.png)
+
+**Home Page**
+
+Main crowd image - This is the first feature the user sees when they enter the website. It immediately fits the theme of the website, as it depicts a crowd at a live show gig. If the user isn't logged in, they see the register button and also a login prompt below if they already have an account. If the user is logged in, the button changes to 'Browse Reviews' and the login prompt is removed.
+
+This feature helps the user because they have a quick way to register for an account and start reading and posting reviews if they haven't already registered, and also provides a quick way to browse reviews if they are logged in.
+
+![Main crowd image](documentation/features/crowd.png)
+
+
