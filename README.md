@@ -117,4 +117,7 @@ This feature helps the user because they have a quick way to register for an acc
 
 ![Main crowd image](documentation/features/crowd.png)
 
+Home welcome text - This is the next section the user sees on the home page. It's a basic explanation of the website with some instructions how to get the most out of it. It also nicely separates the large image above from the recent reviews cards below it. This feature helps the user as it informs them what they need to do to get the most out of the website.
+
+![Home welcome text](documentation/features/homewelcome.png)
 
