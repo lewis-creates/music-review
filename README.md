@@ -34,3 +34,24 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 - [**Credits**](#credits)
   - [**Content**](#content)
   - [**Media**](#media)
+
+## **Planning stage**
+
+### **Target Audiences**
+
+- Users with an interest or love of any music
+- Users who attend music festivals
+- Users looking for new music to listen to
+- Users thinking about getting into other genres of music
+
+### **User Stories**
+
+- As a user, I want the site to be easy to use.
+- As a user, I want to the site to be responsive.
+- As a user, I want the ability to read reviews posted by other users.
+- As a user, I want the ability to post new reviews.
+- As a user, I want the ability to read my own reviews.
+- As a user, I want the ability to edit my own reviews.
+- As a user, I want the ability to delete my own reviews.
+- As a user, I want the ability to search for reviews by song or artist name.
+- As a user, I want the ability to create an account.
