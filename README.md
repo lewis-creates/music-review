@@ -238,5 +238,71 @@ Responsiveness was checked and worked as intended with the following browsers an
   - Safari
   - Firefox
 
-  DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues. 
+  DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues.
+
+  ### **Functionality**
+
+Manual testing as a logged **OUT** user
+
+Feature/Test                                                                       | Expected Outcome.                                                                                                                                                  | Result |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Navbar layout                                                                    | Only able to see and click home, login and register                                                                                                                | Pass  |
+| Logo in Navbar                                                                   | Redirect to Homepage                                                                                                                                               | Pass  |
+| Nav links                                                                        | Redirect to the relevant pages                                                                                                                                     | Pass  |
+| Home page, register here button                                                  | Redirect to the register page                                                                                                                                      | Pass  |
+| Home page, recent reviews                                                        | To change each time on refresh, if more than 3 reviews are found                                                                                                   | Pass  |
+| Footer, email link                                                               | Start a new email to Riff Review                                                                                                                                   | Pass  |
+| Footer, social media links                                                       | Redirect to relevant social media pages                                                                                                                            | Pass  |
+| Login Page, login form match                                                     | When user account exists in database and details entered match, logs user in and shows profile page                                                                | Pass  |
+| Login Page, login form non match                                                 | When user details don't match any user accounts stored in the database, flash message should appear to explain                                                     | Pass  |
+| Login Page, register link                                                        | Redirect to the register page                                                                                                                                      | Pass  |
+| Register Page, register form success                                             | When user completes all fields following the instructions given and clicks register, automatically logs user in and shows profile page                             | Pass  |
+| Register Page, register form existing username                                   | When user attempts to register with username that already exists, no registration recorded and flash message to appear to inform user                              | Pass  |
+| Register Page, register form unsuccessful                                        | If user doesn't complete all required fields, or follow instructions given, or if passwords don't match, alert/flash appears to explain and they must try again    | Pass  |
+| Register Page, login link                                                        | Redirect to the login page                                                                                                                                         | Pass  |
+| Reviews, new review, edit review, delete review, review details, profile pages   | Trying to access these pages while not logged in should inform the user they must be logged in                                                                     | Pass  |
+
+Manual testing as a logged **IN** user
+
+Feature/Test                                                                       | Expected Outcome.                                                                                                               | Result |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Navbar layout                                            | Login and register buttons removed. Reviews, new review, profile and logout added                                                                       | Pass  |
+| Logo in Navbar                                           | Redirect to Homepage                                                                                                                                    | Pass  |
+| Nav links                                                | Redirect to the relevant pages                                                                                                                          | Pass  |
+| Home Page, Browse Reviews button                         | Redirect to reviews page                                                                                                                                | Pass  |
+| Home Page, recent reviews refresh                        | To change each time on refresh if more than 3 reviews are found                                                                                         | Pass  |
+| Home Page, recent reviews read more buttons              | For any reviews shown, read more button should display                                                                                                  | Pass  |
+| Reviews page, new search with results found              | When search is clicked, reviews below are narrowed down to the result(s) found                                                                          | Fail |
+| Reviews page, new search with no results found           | When search is clicked, all reviews disappear with a message informing the user                                                                         | Fail  |
+| Reviews page, reset button                               | When clicked, redirect to the reviews page, therefore resetting the process / refreshing the page                                                       | Pass  |
+| Reviews page, post review button                         | When no search results are found, ‘post the first one’ button to appear and redirect to new_review page when clicked                                    | Pass  |
+| Reviews page, reviews section                            | Show all reviews found in database with read more button redirecting to the page for that review when clicked                                           | Pass  |
+| Reviews page, reviews belonging to a user                | If any reviews belong to the logged in user, edit and delete buttons should appear.                                                                     | Pass  |
+| Reviews page, edit review button                         | Redirect to edit_review page                                                                                                                            | Pass  |
+| Reviews page, delete review button                       | Open delete_review modal                                                                                                                                | Pass  |
+| Reviews page, delete review modal                        | Go back closes the modal, delete review removes the review completely and redirects to reviews page                                                     | Pass  |
+| New Review page, all fields required                     | All input fields must be completed/selected prior to submitting a review                                                                                | Pass  |
+| New Review page, song name, artist name & review title   | Both input fields should have a max length of 60 characters                                                                                             | Pass  |
+| New Review page, submit review button                    | Posts review to reviews page, profile page and redirects to reviews page                                                                                | Pass  |
+| Profile page, reviews to be displayed                    | Only reviews displayed on the profile page should belong to the logged in user                                                                          | Pass  |
+| Profile page, read more button                           | Redirect to the page for that specific review                                                                                                           | Pass  |
+| Profile page, edit button                                | Redirect to edit_review page                                                                                                                            | Pass  |
+| Profile page, delete review button                       | Open delete_review modal                                                                                                                                | Pass  |
+| Profile page, delete review modal                        | Go back closes the modal, delete review removes the review completely and redirects to reviews page                                                     | Pass  |
+| Profile page, post review button                         | When no reviews for the logged in user are found, the button should appear and redirect to new_review page when clicked                                 | Pass  |
+| Edit Review page, populated form                         | All fields should be populated with the existing review details                                                                                         | Pass  |
+| Edit Review page, form validation                        | Should include the same validation checks as the new_review page mentioned above before being allowed to edit                                           | Pass  |
+| Edit Review page, edit review button                     | Updates the changes and refreshes the page showing the newly entered details (if any)                                                                   | Pass  |
+| Edit Review page, back to reviews button                 | Redirects to the reviews page                                                                                                                           | Pass  |
+| Review Details page                                      | Should show all relevant review data on the page, including the explicit language warning if yes was chosen for this input.                             | Pass  |
+| Review Details page, Back to Reviews button              | Redirect to reviews page                                                                                                                                | Pass  |
+| Review Details page, edit review button                  | Redirect to edit_review page                                                                                                                            | Pass  |
+| Review Details page, delete review button                | Open delete_review modal                                                                                                                                | Pass  |
+| Review Details page, delete review modal                 | Go back closes the modal, delete review removes the review completely and redirects to reviews page                                                     | Pass  |
+| Editing another user's review                            | Attempting to insert the ID of another users review at the end of the edit_review URL should inform the user it is not theirs to edit.                  | Pass  |
+| Deleting another user's review                            | Attempting to insert the ID of another users review at the end of the delete_review URL should inform the user it is not theirs to delete.              | Pass  |
+| Logout                                                   | Logs the user out and redirects to the login page                                                                                                       | Pass  |
+| Footer, email link                                       | Start a new email to Riff Review                                                                                                                        | Pass  |
+| Footer, social media links                               | Redirect to relevant social media pages                                                                                                                 | Pass  |
+
 
