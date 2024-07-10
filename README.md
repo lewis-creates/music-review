@@ -203,3 +203,40 @@ This feature helps the user as it allows them to become part of the website and 
 
 ## **Future Enhancements**
 
+- An admin account could be added in future, with the relevant code to allow the admin to have full access to the application, including the ability to edit and delete all reviews, regardless if the review was created by the admin account itself.
+- Users could be asked as part of the register process what their favourite music genre is, and a suggested reviews section could be introduced showing reviews of that genre which may be of more interest to them than any other.
+- A voting/scoring system could be introduced so that users can 'like' a review, with the total likes showing on the review card. Reviews could then be sorted by popularity/likes.
+- By also obtaining the users email address, a forgot password function could be added allowing the user to reset their password if they forget their old one.
+
+## **Testing Phase**
+
+### **Responsiveness**
+
+Responsiveness was checked and worked as intended with the following browsers and screen sizes:
+
+- Extra Large (27"):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+- Large (15"):
+
+  - Chrome
+  - Firefox
+  - Safari
+
+- Medium (10.9"):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+- Small (6"):
+
+  - Chrome
+  - Safari
+  - Firefox
+
+  DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues. 
+
