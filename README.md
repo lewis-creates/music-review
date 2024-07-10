@@ -168,3 +168,38 @@ Profile reviews -  This is where any reviews the particular user has created are
 ![Profile reviews](documentation/features/profilereviews.png)
 
 **Edit Review Page**
+
+Edit review form - This form is a replica of the new review form, however it is populated with the existing review details which can be altered as needed. To save the changes, the user clicked edit review and the website and database are updated simultaneously. If they change their mind and wish to go back, there is a button for this also which takes them back to the main reviews page. The app.py file includes logic to stop users trying to hack into other users reviews that don't belong to them. If the user in session doesn't match the user who created the review, a flash message appears to tell them it is not their review and they are unable to edit it.
+
+This feature helps the user as it allows them to update their reviews if they made a mistake or had a change of heart and wish to change their opinion on a particular song.
+
+PLACEHOLDER FOR EDIT REVIEW
+
+**Review Details Page**
+
+Review details -  This is the page where the specific review selected is displayed in full. It includes all of the relevant details filled in when creating a review. If the user chooses that the song includes explicit language a red warning alert appears at the bottom which can't be missed. If the review belongs to the user logged in, they are also shown the edit and delete buttons. Otherwise, the user only sees the back to reviews button, for when they are done reading.
+
+This feature helps the user as it allows them to read a single review and especially helps for longer reviews where the review content is quite long.
+
+![Review details](documentation/features/reviewdetails.png)
+
+**Login Page**
+
+Login form - This form allows the user to login to their account. If they haven't created one, a prompt to register an account is included below. They must enter a username and password that matches that of a record in the database or they are shown a flash message to tell them the details are incorrect. Once the user is logged in, they are in session which prompts the changes and features to appear throughout the site mentioned above.
+
+This feature helps the user as it allows them to log in to their account if they have one and manage their own reviews. They also gain access the full features of the website.
+
+![Login](documentation/features/login.png)
+
+**Register Page**
+
+Register form - This form allows the user to register for an account if they don't already have one. If they already have an account, a prompt is displayed underneath the form where they can login. When registering for an account, the user must follow the validation requirements, clearly explained underneath each input. If they don't, they are told to follow the requirements when they try to register.
+
+The form includes a confirm password input, and the website compares the two to ensure they are the same before the user is registered. If they are not the same, they are told this is the case and that they need to try again.
+
+This feature helps the user as it allows them to become part of the website and begin creating and reading reviews.
+
+![Register](documentation/features/register.png)
+
+## **Future Enhancements**
+
