@@ -86,3 +86,11 @@ The [WCAG Color Contrast Checker](https://accessibleweb.com/color-contrast-check
 ## **Typography**
 
 I decided to import the Oswald font from Google Fonts as I felt it had a modern vibe to it without compromising on readability. It's stylish, clear to read and worked well with all of the applications features.
+
+## *Features**
+
+**Features common to all pages**
+
+Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
+
+This feature helps the user as it gives them a clear, easy way to navigate around the website and find what they need.
