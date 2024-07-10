@@ -83,3 +83,6 @@ The [WCAG Color Contrast Checker](https://accessibleweb.com/color-contrast-check
 
 ![Color contrast](documentation/color-contrast/colorcontrast.png)
 
+## **Typography**
+
+I decided to import the Oswald font from Google Fonts as I felt it had a modern vibe to it without compromising on readability. It's stylish, clear to read and worked well with all of the applications features.
