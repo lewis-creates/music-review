@@ -305,4 +305,56 @@ Feature/Test                                                                    
 | Footer, email link                                       | Start a new email to Riff Review                                                                                                                        | Pass  |
 | Footer, social media links                               | Redirect to relevant social media pages                                                                                                                 | Pass  |
 
+### **Validators**
+
+**HTML Validators**
+
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home page HTML validator" src="documentation/html-validators/homepagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews page HTML validator" src="documentation/html-validators/editreviewhtmltest.png">
+</details>
+<br>
+<details>
+<summary>New Review Page</summary>
+<br>
+<img alt="New Review page HTML validator" src="documentation/html-validators/newreviewshtmltest.png">
+</details>
+<br>
+<details>
+<summary>Profile Page</summary>
+<br>
+<img alt="Profile page HTML validator" src="documentation/html-validators/homepagehtmltest.png">
+</details>
+<br>
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit Review page HTML validator" src="documentation/html-validators/loginhtmltest.png">
+</details>
+<br>
+<details>
+<summary>Review Details Page</summary>
+<br>
+<img alt="Review Details page HTML validator" src="documentation/html-validators/profilehtmltest.png">
+</details>
+<br>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login page HTML validator" src="documentation/html-validators/registerhtmltest">
+</details>
+<br>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register page HTML validator" src="documentation/html-validators/reviewdetailshtmltest.png">
+</details>
+<br>
 
