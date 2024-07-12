@@ -17,7 +17,6 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
   - [**Target Audiences**](#target-audiences)
   - [**User Stories**](#user-stories)
   - [**Site Aims**](#site-aims)
-  - [**Wireframes**](#wireframes)
   - [**Color Scheme**](#color-scheme)
 - [**Typography**](#typography)
 - [**Features**](#features)
@@ -61,12 +60,6 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 - Offer the ability to register an account, alloweing the user to see and manage their own reviews on a single page.
 - To keep the user informed as they create, edit and delete reviews with confirmation of each step.
 - To allow the user to search for reviews quickly and easily.
-
-### **Wireframes**
-
-Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided.
-
-PLACEHOLDER WIREFRAME IMAGES NEEDED
 
 ### **Color Scheme**
 
@@ -292,8 +285,8 @@ Feature/Test                                                                    
 | Home Page, Browse Reviews button                         | Redirect to reviews page                                                                                                                                | Pass  |
 | Home Page, recent reviews refresh                        | To change each time on refresh if more than 3 reviews are found                                                                                         | Pass  |
 | Home Page, recent reviews read more buttons              | For any reviews shown, read more button should display                                                                                                  | Pass  |
-| Reviews page, new search with results found              | When search is clicked, reviews below are narrowed down to the result(s) found                                                                          | Fail |
-| Reviews page, new search with no results found           | When search is clicked, all reviews disappear with a message informing the user                                                                         | Fail  |
+| Reviews page, new search with results found              | When search is clicked, reviews below are narrowed down to the result(s) found                                                                          | Pass |
+| Reviews page, new search with no results found           | When search is clicked, all reviews disappear with a message informing the user                                                                         | Pass  |
 | Reviews page, reset button                               | When clicked, redirect to the reviews page, therefore resetting the process / refreshing the page                                                       | Pass  |
 | Reviews page, post review button                         | When no search results are found, ‘post the first one’ button to appear and redirect to new_review page when clicked                                    | Pass  |
 | Reviews page, reviews section                            | Show all reviews found in database with read more button redirecting to the page for that review when clicked                                           | Pass  |
