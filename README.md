@@ -31,9 +31,7 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
 - [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
 - [**Tech**](#tech)
-- [**Credits**](#credits)
-  - [**Content**](#content)
-  - [**Media**](#media)
+- [**Credits**](#media)
 
 ## **Planning stage**
 
@@ -513,6 +511,6 @@ Tools used:
 - Fontawesome
 - Google Fonts
 
-### **Media**
+## **Media**
 
 Crowd image - https://www.pexels.com/photo/people-at-concert-1105666/
