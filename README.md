@@ -211,12 +211,15 @@ The `users` collection stores information about registered users.
 
 Example document:
 
+```json
 {
   "_id": ObjectId("60d0fe4f5311236168a109ca"),
   "username": "john_doe",
   "password": "$2b$12$C6U/d.tD8Oxe8V2z10/Zeu3EpOg2A2YB1hPLf/5VzLR3Bd0ZOCaHm",
   "reviews": [ObjectId("60d0fe4f5311236168a109cb"), ObjectId("60d0fe4f5311236168a109cc")]
 }
+```
+
 
 ## **Future Enhancements**
 
