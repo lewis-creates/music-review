@@ -358,3 +358,15 @@ Feature/Test                                                                    
 </details>
 <br>
 
+**CSS Validator**
+
+style.css result
+
+![style.css validator result](documentation/css-validator/csstest.png)
+
+**JS Hint**
+
+script.js result
+
+![script.js validator result](documentation/js-validator/jshint.png)
+
