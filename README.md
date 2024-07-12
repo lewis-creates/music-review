@@ -421,3 +421,98 @@ Lighthouse result
 **User story 9**: As a user, I want the ability to create an account.
 
 **Achieved?**: Yes. When a user first enters the website, they can register for an account via the register button in the navigation or the register button shown on the guitar image, which is one of the first sections they see.
+
+## **Bugs**
+
+I found the following bugs during the development process:
+
+- Unable to run project via IDE
+  - Problem: MONGO URI is not found when trying to run the app from IDE
+  - Cause: Typo error, IDE was trying to find eny.py instead of env.py
+  - Solution: Typo was corrected and the MONGO URI was found, application was able to run from the IDE
+
+- Review title input font size too big
+  - Problem: When creating or editing a review, the text typed/showing in the input field was very big.
+  - Cause: The ID linked to these fields was styled in the application CSS file with a larger font size, which is applicable on the review details page, but not in the forms on the new review or edit review pages.
+  - Solution: The relevant ID name was changed so it was specific to the review details page only, and not the others.
+
+---
+
+## **Deployment**
+
+### **Heroku**
+
+This application was built using the Gitpod IDE and deployed via Heroku. Follow these instructions to recreate the deployment process:
+
+**1. Prepare the required files**
+
+In the terminal in your code editor, type:
+
+```
+pip3 freeze --local > requirements.txt
+```
+
+and then...
+
+```
+echo web: python app.py > Procfile
+```
+
+These commands create two new files in your root directory which Heroku needs to run the application. Ensure Procfile includes a capital P and there is no file extension. Please check your Procfile and remove the last blank line if there is one, to avoid problems when trying to run your app.
+
+**2. Create the app**
+
+- Go to [Heroku](https://heroku.com/) and login to your account.
+- Click 'New' and then 'Create new app'.
+- Choose an app name and the region closest to you.
+
+**3. Linking to GitHub**
+
+- Within the deployment method, click 'GitHub'
+- With your GitHub profile selected, type in your repo name and then search.
+- Once found, click connect.
+
+**4. Environment variables**
+
+- Click on 'Settings' and then 'Reveal Config Vars'.
+- Add the required key/value variables from your env.py file.
+
+| Key          | Value              |
+| ------------ | ------------------ |
+| IP           | 0.0.0.0            |
+| PORT         | 5000               |
+| SECRET_KEY   | YOUR_SECRET_KEY*   |
+| MONGO_URI    | YOUR_MONGO_URI*    |
+| MONGO_DBNAME | YOUR_MONGO_DBNAME* |
+
+Values with * are your own values to be created.
+
+**5. Deployment**
+
+- Ensure your two files in step 1 are pushed to GitHub.
+- Within the 'Deploy' tab of your Heroku app, click 'Enable Automatic Deploys'
+- Just below this, click 'Deploy Branch'.
+- Within a few minutes, Heroku should confirm your app has been deployed with a button to view it online.
+
+---
+
+## **Tech**
+
+Languages used:
+
+- HTML
+- CSS
+- JavaScript
+- Python
+
+Tools used:
+
+- MongoDB
+- Flask
+- Bootstrap
+- Fontawesome
+- Google Fonts
+
+### **Media**
+
+Crowd image - https://www.pexels.com/photo/people-at-concert-1105666/
