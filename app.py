@@ -45,6 +45,7 @@ def index():
     selected_reviews = reviews[:3]
     return render_template("index.html", reviews=selected_reviews)
 
+
 @app.route("/get_reviews")
 @login_required
 def get_reviews():
@@ -232,6 +233,7 @@ def delete_review(review_id):
     mongo.db.reviews.delete_one({"_id": ObjectId(review_id)})
     flash("Your review has been deleted.")
     return redirect(url_for("get_reviews"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
