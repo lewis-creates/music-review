@@ -21,6 +21,7 @@ Vibe Verdicts is an online application for music lovers to read and post reviews
   - [**Color Scheme**](#color-scheme)
 - [**Typography**](#typography)
 - [**Features**](#features)
+- [**Data Schema**](#data-schema)
 - [**Future Enhancements**](#future-enhancements)
 - [**Testing Phase**](#testing-phase)
   - [**Responsiveness**](#responsiveness)
@@ -198,6 +199,24 @@ The form includes a confirm password input, and the website compares the two to 
 This feature helps the user as it allows them to become part of the website and begin creating and reading reviews.
 
 ![Register](documentation/features/register.png)
+
+## **Data Schema**
+
+The `users` collection stores information about registered users.
+
+- `_id`: `ObjectId` - Unique identifier for the user.
+- `username`: `String` - The username of the user.
+- `password`: `String` - The hashed password for the user.
+- `reviews`: `Array` - List of review IDs submitted by the user.
+
+Example document:
+```json
+{
+  "_id": ObjectId("60d0fe4f5311236168a109ca"),
+  "username": "john_doe",
+  "password": "$2b$12$C6U/d.tD8Oxe8V2z10/Zeu3EpOg2A2YB1hPLf/5VzLR3Bd0ZOCaHm",
+  "reviews": [ObjectId("60d0fe4f5311236168a109cb"), ObjectId("60d0fe4f5311236168a109cc")]
+}
 
 ## **Future Enhancements**
 
