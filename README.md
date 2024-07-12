@@ -210,7 +210,7 @@ The `users` collection stores information about registered users.
 - `reviews`: `Array` - List of review IDs submitted by the user.
 
 Example document:
-```json
+
 {
   "_id": ObjectId("60d0fe4f5311236168a109ca"),
   "username": "john_doe",
