@@ -59,3 +59,36 @@
                         {% endif %}
                     </select>
                 </div>
+                 <!-- edit review title input -->
+                 <div class="mb-3">
+                    <i class="fa-solid fa-pencil"></i>
+                    <label for="review-title" class="form-label">Review Title</label>
+                    <input type="text" class="form-control" id="review-title" name="review_title"
+                        value="{{ review.review_title }}" required>
+                </div>
+                <!-- edit review content input -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-align-left"></i>
+                    <label for="review-content" class="form-label">Review Content</label>
+                    <textarea class="form-control" id="review-content" name="review_content" rows="4" required>
+                    {{- review.review_content -}}
+                    </textarea>
+                </div>
+                <!-- submit button -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">
+                        Save Changes <i class="fa-solid fa-pencil"></i>
+                    </button>
+                </div>
+                <!-- back button -->
+                <div class="d-grid gap-2 back-button mt-3">
+                    <a href="{{ url_for('get_reviews') }}" class="btn btn-danger">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Reviews
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
