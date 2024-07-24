@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Edit Review</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<!-- edit review form -->
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-md-8 mb-5">
+            <form method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+                <!-- edit genre dropdown -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-rectangle-list"></i>
+                    <label for="genre-name">Music Genre</label>
+                    <select class="form-select" id="genre-name" name="genre_name" required>
+                        <option value="" disabled>Please select a genre...</option>
+                        {% for genre in genres %}
+                        {% if genre.genre_name == review.genre_name %}
+                        <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+                        {% else %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
