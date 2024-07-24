@@ -30,3 +30,32 @@
                         {% endfor %}
                     </select>
                 </div>
+                <!-- edit song name input -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-music"></i>
+                    <label for="song-name" class="form-label">Song Name</label>
+                    <input type="text" class="form-control" id="song-name" name="song_name"
+                        value="{{ review.song_name }}" required>
+                </div>
+                <!-- edit artist name input -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-user-group"></i>
+                    <label for="artist-name" class="form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artist-name" name="artist_name"
+                        value="{{ review.artist_name }}" required>
+                </div>
+                <!-- edit explicit language dropdown -->
+                <div class="mb-3">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <label for="explicit-language">Does this song include explicit language?</label>
+                    <select class="form-select" id="explicit-language" name="explicit_language" required>
+                        <option value="" disabled>Please select an answer...</option>
+                        {% if review.explicit_language == "yes" %}
+                        <option value="yes" selected>Yes</option>
+                        <option value="no">No</option>
+                        {% else %}
+                        <option value="yes">Yes</option>
+                        <option value="no" selected>No</option>
+                        {% endif %}
+                    </select>
+                </div>
